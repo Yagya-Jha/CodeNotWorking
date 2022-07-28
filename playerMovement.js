@@ -1,0 +1,17 @@
+AFRAME.registerComponent("player-movement", {
+    init: function () {
+      this.walk();
+    },
+    walk: function () {
+      window.addEventListener("keypress", (e) => {
+        if(e.key==="w" || e.key==="s" || e.key==="a" || e.key==="d"){
+          var entity = document.querySelector("#sound2");
+          entity.components.sound.playSound();
+        }
+
+      });
+    },
+  });
+
+
+  
